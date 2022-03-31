@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(Images/zlatni.jpg);
+  background-repeat: no-repeat;
+  animation: moveImg 100s linear forwards;
+  background-position-y: top;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes moveImg {
+  100% {
+    background-position-y: bottom;
+  }
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 60px 20px 60px;
+  padding: 20px 0px 20px 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.65);
+}
+
+.current-image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.current-image img {
+  width: 80%;
+  max-width: 900px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 16px;
+  row-gap: 16px;
+  min-width: 300px;
+}
+
+.image-grid img:hover {
+  opacity: 0.5;
+  transition: all ease-in-out 200ms;
+  cursor: pointer;
+}
+
+.grid-item {
+  object-fit: cover;
+  width: 100%;
+  max-width: 170px;
+  max-height: 110px;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 35px;
+  justify-content: center;
+}
+
+button {
+  padding: 20px;
+  width: 280px;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 22px;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.65);
+  margin: 0 40px;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn-left {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white(231, 231, 231, 0.9);
+}
+
+.btn-left:hover {
+  background-color: rgba(245, 245, 245, 0.25);
+  cursor: pointer;
+}
+
+.btn-left:active {
+  background-color: rgba(24, 24, 24, 0.8);
+}
+
+.btn-right {
+  border: none;
+  background-color: rgb(22, 51, 180);
+}
+
+.btn-right:hover {
+  background-color: rgb(69, 103, 255);
+  cursor: pointer;
+}
+
+.btn-right:active {
+  background-color: rgb(0, 19, 104);
+}
+
+.arrow-right,
+.arrow-left {
+  border: solid whitesmoke;
+  border-width: 0 8px 8px 0;
+  padding: 8px;
+  display: inline-block;
+}
+
+.arrow-right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.arrow-left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.arrow-button {
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(241, 241, 241, 0.2);
+  width: 60px;
+  height: 60px;
+  margin: 0 30px;
+}
+
+.arrow-button:hover {
+  background-color: rgba(241, 241, 241, 0.6);
+  cursor: pointer;
+}
+
+.arrow-button:active {
+  background-color: rgba(241, 241, 241, 1);
+}
+
+/* CUSTOM */
+
+@media only screen and (max-width: 1600px) {
+  body {
+    overflow: scroll;
+    height: 100%;
+    width: 100%;
+  }
+  .image-grid {
+    grid-template-columns: auto auto;
+  }
+  .current-image img {
+    width: 80%;
+    max-width: 650px;
+  }
+  .button-wrapper {
+    margin: 18px 0;
+  }
+}
+
+/* TABLET */
+
+@media only screen and (max-width: 1280px) {
+  body {
+    overflow: scroll;
+  }
+  .image-grid {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 10px;
+    row-gap: 10px;
+    min-width: 200px;
+  }
+  .arrow-button {
+    border-radius: 15%;
+    border: none;
+    background-color: rgba(241, 241, 241, 0.6);
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+  }
+  .arrow-right,
+  .arrow-left {
+    display: none;
+  }
+  .current-image img {
+    width: 80%;
+  }
+  .main-wrapper {
+    flex-direction: column-reverse;
+    margin: 20px 40px 20px 40px;
+    padding: 15px 10px;
+  }
+  .button-wrapper {
+    margin: 18px 0;
+  }
+  button {
+    padding: 20px;
+    width: 220px;
+    margin: 0 25px;
+  }
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 874px) {
+  body {
+    animation: none;
+    overflow: scroll;
+    height: 100%;
+    background-attachment: fixed;
+  }
+  .image-grid {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+    row-gap: 10px;
+    min-width: 200px;
+  }
+  .arrow-button {
+    display: none;
+  }
+  .arrow-right,
+  .arrow-left {
+    display: none;
+  }
+  .current-image img {
+    width: 100%;
+  }
+  .main-wrapper {
+    margin: 5px 5px;
+    padding: 10px 10px;
+  }
+  button {
+    padding: 20px;
+    width: 220px;
+    margin: 8px 10px;
+  }
+  .button-wrapper {
+    flex-direction: column;
+    margin: 18px 0;
+  }
+}

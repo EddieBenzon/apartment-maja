@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="gallery.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap"
+      rel="stylesheet"
+    />
+    <title>Apartment Maja Gallery</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <section class="image-grid">
+        <img src="Images/0.jpg" alt="" class="grid-item" />
+        <img src="Images/1.jpg" alt="" class="grid-item" />
+        <img src="Images/2.jpg" alt="" class="grid-item" />
+        <img src="Images/3.jpg" alt="" class="grid-item" />
+        <img src="Images/4.jpg" alt="" class="grid-item" />
+        <img src="Images/5.jpg" alt="" class="grid-item" />
+        <img src="Images/6.jpg" alt="" class="grid-item" />
+        <img src="Images/7.jpg" alt="" class="grid-item" />
+        <img src="Images/8.jpg" alt="" class="grid-item" />
+        <img src="Images/9.jpg" alt="" class="grid-item" />
+        <img src="Images/10.jpg" alt="" class="grid-item" />
+        <img src="Images/11.jpg" alt="" class="grid-item" />
+        <img src="Images/12.jpg" alt="" class="grid-item" />
+      </section>
+      <section class="current-image">
+        <button onclick="previousImg()" class="arrow-button"><i class="arrow-left"></i></button>
+        <img src="Images/0.jpg" alt=""  id="current-img"/>
+        <button onclick="nextImg()" class="arrow-button"><i class="arrow-right"></i></button>
+      </section>
+    </div>
+    <div class="button-wrapper">
+          <a href="index.html"
+            ><button class="btn-left">Home</button>
+            <a
+              href="https://www.airbnb.com/rooms/26686650?adults=1&guests=1&s=13&unique_share_id=abf5e09d-d2fc-4f96-a447-6a2c9cb0e6b2&_branch_match_id=943091526820714247&source_impression_id=p3_1626353030_iYKIqCJ7mv4qRbuz"
+              target="_blank"
+            >
+            <button class="btn-right">Book now on Airbnb!</button></a
+          >
+        </div>
+    <script src="script.js"></script>
+  </body>
+</html>
