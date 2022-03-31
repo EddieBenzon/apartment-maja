@@ -7,7 +7,7 @@
 body {
   background: url(Images/3.jpg);
   background-repeat: no-repeat;
-  animation: moveImg 50s linear forwards;
+  animation: moveImg 40s linear forwards;
   background-position-y: top;
   height: 100vh;
   overflow: hidden;
